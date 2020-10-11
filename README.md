@@ -1,7 +1,7 @@
 [![Build](https://github.com/albertomsp/game-of-life-godot/workflows/ci-tests/badge.svg)](https://github.com/albertomsp/game-of-life-godot/actions?query=workflow%3Aci-tests+branch%3Amain)
 
 ## Game of life
-(https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in GoDot.
+Implementation of the [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in GoDot.
 
 The application can be run in the browser: https://albertomsp.github.io/games/game_of_life/
 
