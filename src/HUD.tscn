@@ -79,6 +79,21 @@ text = "Clear"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 604.0
+margin_top = 458.0
+margin_right = 787.0
+margin_bottom = 474.0
+min_value = 0.1
+max_value = 5.0
+value = 0.1
+tick_count = 10
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="NextGenButton" to="." method="_on_NextGenButton_pressed"]
 [connection signal="pressed" from="PopulateRandom" to="." method="_on_PopulateRandom_pressed"]
 [connection signal="pressed" from="ClearButton" to="." method="_on_ClearButton_pressed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]

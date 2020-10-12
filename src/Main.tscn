@@ -38,6 +38,11 @@ script = ExtResource( 2 )
 grid_size = Vector2( 50, 25 )
 
 [node name="HUD" parent="Board" instance=ExtResource( 3 )]
+
+[node name="Camera2D" type="Camera2D" parent="Board"]
+anchor_mode = 0
+current = true
 [connection signal="clear_matrix" from="Board/HUD" to="Board" method="clear_matrix"]
 [connection signal="next_generation" from="Board/HUD" to="Board" method="update_next_generation"]
 [connection signal="randomize_matrix" from="Board/HUD" to="Board" method="randomize_matrix"]
+[connection signal="zoom_value_changed" from="Board/HUD" to="Board" method="zoom_value_changed"]

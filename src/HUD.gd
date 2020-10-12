@@ -3,6 +3,7 @@ extends CanvasLayer
 signal next_generation
 signal randomize_matrix
 signal clear_matrix
+signal zoom_value_changed
 
 func update_counter(counter):
 	$GenerationCounter.text = str(counter)
@@ -18,3 +19,7 @@ func _on_PopulateRandom_pressed():
 
 func _on_ClearButton_pressed():
 	emit_signal("clear_matrix")
+
+
+func _on_HSlider_value_changed(value):
+	emit_signal("zoom_value_changed", value)
