@@ -37,8 +37,9 @@ func clear_matrix():
 	$HUD.update_counter(generation_counter)
 
 
+# Changes the camera zoom with the values of the slider (min and max values
+# specified in the slider config)
 func zoom_value_changed(value):
-	print(value)
 	$Camera2D.zoom.x = value
 	$Camera2D.zoom.y = value
 	

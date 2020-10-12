@@ -35,13 +35,15 @@ __meta__ = {
 tile_set = SubResource( 1 )
 format = 1
 script = ExtResource( 2 )
-grid_size = Vector2( 50, 25 )
+grid_size = Vector2( 100, 80 )
 
 [node name="HUD" parent="Board" instance=ExtResource( 3 )]
 
 [node name="Camera2D" type="Camera2D" parent="Board"]
 anchor_mode = 0
 current = true
+offset_h = 1.0
+offset_v = 1.0
 [connection signal="clear_matrix" from="Board/HUD" to="Board" method="clear_matrix"]
 [connection signal="next_generation" from="Board/HUD" to="Board" method="update_next_generation"]
 [connection signal="randomize_matrix" from="Board/HUD" to="Board" method="randomize_matrix"]
