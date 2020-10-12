@@ -44,13 +44,15 @@ func zoom_value_changed(value):
 	$Camera2D.zoom.y = value
 	
 	
-	
 # Handles the creation or deletion of cells in the cell_matrix by clicking
 # on the cells.
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			var cell_coords = world_to_map(event.position)
+#			# Takes into account the current zooming level when clicking in
+			# the board. `x` and `y` zoom values are always the same in this 
+			# case, so just using `x` works in this app.
+			var cell_coords = world_to_map(event.position * $Camera2D.zoom.x)
 			
 			# Don't do anything if clicked outside the grid
 			if (cell_coords.y >= cell_matrix.size() or 
