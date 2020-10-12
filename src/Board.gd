@@ -37,6 +37,14 @@ func clear_matrix():
 	$HUD.update_counter(generation_counter)
 
 
+# Changes the camera zoom with the values of the slider (min and max values
+# specified in the slider config)
+func zoom_value_changed(value):
+	$Camera2D.zoom.x = value
+	$Camera2D.zoom.y = value
+	
+	
+	
 # Handles the creation or deletion of cells in the cell_matrix by clicking
 # on the cells.
 func _unhandled_input(event):
@@ -135,4 +143,5 @@ func get_number_of_live_neighbours(cell_matrix, y, x):
 	return number_of_live_neighbours
 	
 	
+
 
