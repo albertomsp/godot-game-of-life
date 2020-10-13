@@ -5,6 +5,10 @@ signal randomize_matrix
 signal clear_matrix
 signal zoom_value_changed
 
+func _ready():
+	emit_signal("zoom_value_changed", $Label/HSlider.value)
+	
+
 func update_counter(counter):
 	$GenerationCounter.text = str(counter)
 
