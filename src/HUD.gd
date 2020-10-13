@@ -6,7 +6,7 @@ signal clear_matrix
 signal zoom_value_changed
 
 func _ready():
-	emit_signal("zoom_value_changed", $Label/HSlider.value)
+	emit_signal("zoom_value_changed", $ZoomLabel/ZoomSlider.value)
 	
 
 func update_counter(counter):
