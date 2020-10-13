@@ -143,7 +143,8 @@ func get_number_of_live_neighbours(cell_matrix, y, x):
 			number_of_live_neighbours += 1
 	
 	return number_of_live_neighbours
-	
-	
 
+
+func _on_GenerationTimer_timeout():
+	update_next_generation()
 
