@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-size = 20
+size = 18
 font_data = ExtResource( 2 )
 
 [node name="HUD" type="CanvasLayer"]
@@ -26,7 +26,9 @@ anchor_top = 0.97
 anchor_right = 1.0
 anchor_bottom = 0.97
 margin_left = -182.0
-margin_top = -31.0
+margin_top = -30.6
+margin_right = -36.0
+margin_bottom = -4.60001
 custom_fonts/font = SubResource( 1 )
 text = "Next Generation"
 __meta__ = {
@@ -34,10 +36,13 @@ __meta__ = {
 }
 
 [node name="PopulateRandom" type="Button" parent="."]
+anchor_left = 0.03
 anchor_top = 0.97
+anchor_right = 0.03
 anchor_bottom = 0.97
-margin_top = -31.0
-margin_right = 129.0
+margin_top = -30.2079
+margin_right = 102.0
+margin_bottom = -4.20792
 custom_fonts/font = SubResource( 1 )
 text = "Randomize"
 __meta__ = {
@@ -45,13 +50,14 @@ __meta__ = {
 }
 
 [node name="GenerationCounter" type="Label" parent="."]
-anchor_left = 0.499592
-anchor_top = 0.97
-anchor_right = 0.499592
-anchor_bottom = 0.97
-margin_left = -7.0
-margin_top = -25.0
-margin_right = 7.0
+anchor_left = 0.5
+anchor_top = 0.955
+anchor_right = 0.5
+anchor_bottom = 0.955
+margin_left = -5.89218
+margin_top = -20.0
+margin_right = 5.10782
+margin_bottom = 3.05176e-05
 rect_rotation = 0.387913
 custom_fonts/font = SubResource( 1 )
 text = "0"
@@ -65,10 +71,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -145.903
-margin_top = -25.0542
-margin_right = -18.9031
-margin_bottom = -0.054245
+margin_left = -134.538
+margin_top = -22.1101
+margin_right = -16.5385
+margin_bottom = -0.110107
 custom_fonts/font = SubResource( 1 )
 text = "Generation: "
 __meta__ = {
@@ -80,8 +86,9 @@ anchor_left = 0.2
 anchor_top = 0.97
 anchor_right = 0.2
 anchor_bottom = 0.97
-margin_top = -31.0
-margin_right = 66.0
+margin_top = -30.6
+margin_right = 55.0
+margin_bottom = -4.60001
 custom_fonts/font = SubResource( 1 )
 text = "Clear"
 __meta__ = {
@@ -90,11 +97,13 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.7
-anchor_top = 0.96
+anchor_top = 0.95
 anchor_right = 0.7
-anchor_bottom = 0.96
+anchor_bottom = 0.95
 margin_left = -59.0
-margin_top = -25.0
+margin_top = -24.8
+margin_right = -13.0
+margin_bottom = -4.79999
 custom_fonts/font = SubResource( 1 )
 text = "Zoom"
 __meta__ = {
@@ -103,10 +112,10 @@ __meta__ = {
 }
 
 [node name="HSlider" type="HSlider" parent="Label"]
-margin_left = -4.09705
-margin_top = 22.5801
-margin_right = 60.903
-margin_bottom = 38.5801
+margin_left = -11.0
+margin_top = 23.0
+margin_right = 65.0
+margin_bottom = 39.0
 min_value = 0.5
 max_value = 5.0
 step = 0.1
