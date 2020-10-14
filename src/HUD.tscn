@@ -117,8 +117,8 @@ margin_top = 20.6052
 margin_right = 140.286
 margin_bottom = 36.6052
 rect_scale = Vector2( -1, 1 )
-min_value = 0.5
-max_value = 5.0
+min_value = 1.0
+max_value = 6.0
 step = 0.1
 value = 3.5
 tick_count = 100
@@ -127,7 +127,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckButton" type="CheckButton" parent="."]
+[node name="PlayButton" type="CheckButton" parent="."]
 anchor_left = 0.6
 anchor_top = 0.97
 anchor_right = 0.6
@@ -142,7 +142,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SpeedSlider" type="HSlider" parent="CheckButton"]
+[node name="SpeedSlider" type="HSlider" parent="PlayButton"]
 margin_left = 107.282
 margin_top = 32.9523
 margin_right = 209.282
@@ -152,7 +152,7 @@ rect_pivot_offset = Vector2( 1, 0 )
 min_value = 0.05
 max_value = 1.0
 step = 0.1
-value = 1.0
+value = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -160,5 +160,5 @@ __meta__ = {
 [connection signal="pressed" from="PopulateRandom" to="." method="_on_PopulateRandom_pressed"]
 [connection signal="pressed" from="ClearButton" to="." method="_on_ClearButton_pressed"]
 [connection signal="value_changed" from="ZoomLabel/ZoomSlider" to="." method="_on_HSlider_value_changed"]
-[connection signal="toggled" from="CheckButton" to="." method="_on_CheckButton_toggled"]
-[connection signal="value_changed" from="CheckButton/SpeedSlider" to="." method="_on_SpeedSlider_value_changed"]
+[connection signal="toggled" from="PlayButton" to="." method="_on_PlayButton_toggled"]
+[connection signal="value_changed" from="PlayButton/SpeedSlider" to="." method="_on_SpeedSlider_value_changed"]

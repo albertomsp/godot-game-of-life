@@ -27,14 +27,16 @@ func randomize_matrix():
 	update_visual_cell_matrix()	
 	generation_counter = 0
 	$HUD.update_counter(generation_counter)
+	# $HUD/PlayButton.pressed = false
 
 
-# Clear the matrix with no live cells
+# Functionality for the clear button - clear the matrix with no live cells
 func clear_matrix():
 	cell_matrix = generate_random_matrix(grid_size.y, grid_size.x, 0)
 	update_visual_cell_matrix()	
 	generation_counter = 0
 	$HUD.update_counter(generation_counter)
+	$HUD/PlayButton.pressed = false
 
 
 # Changes the camera zoom with the values of the slider (min and max values
@@ -43,9 +45,11 @@ func zoom_value_changed(value):
 	$Camera2D.zoom.x = value
 	$Camera2D.zoom.y = value
 
+
 # Logic for every tick of the generation timer
 func _on_GenerationTimer_timeout():
 	update_next_generation()
+
 
 # Activates the automatic generation of the board depending on the check button
 func handle_start_button():
@@ -61,8 +65,6 @@ func handle_stop_button():
 # from the UI.
 func update_generation_speed(next_generation_speed):
 	$GenerationTimer.wait_time = next_generation_speed
-
-
 
 
 # Handles the creation or deletion of cells in the cell_matrix by clicking
@@ -96,8 +98,6 @@ func update_visual_cell_matrix():
 			else:
 				set_cell(x, y, -1)
 
-
-	
 
 # Generates a random cell matrix
 func generate_random_matrix(columns, rows, alive_ratio):

@@ -11,7 +11,7 @@ signal next_generation_speed
 
 func _ready():
 	emit_signal("zoom_value_changed", $ZoomLabel/ZoomSlider.value)
-	emit_signal("next_generation_speed", $CheckButton/SpeedSlider.value)
+	emit_signal("next_generation_speed", $PlayButton/SpeedSlider.value)
 	
 
 func update_counter(counter):
@@ -34,7 +34,7 @@ func _on_HSlider_value_changed(value):
 	emit_signal("zoom_value_changed", value)
 
 
-func _on_CheckButton_toggled(button_pressed):
+func _on_PlayButton_toggled(button_pressed):
 	if button_pressed:
 		emit_signal("start")
 	else:
