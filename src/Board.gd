@@ -94,9 +94,9 @@ func update_visual_cell_matrix():
 	for y in cell_matrix.size():
 		for x in cell_matrix[y].size():
 			if cell_matrix[y][x]:
-				set_cell(x, y, 0)
+				set_cell(x, y, 1)
 			else:
-				set_cell(x, y, -1)
+				set_cell(x, y, 2)
 
 
 # Generates a random cell matrix
