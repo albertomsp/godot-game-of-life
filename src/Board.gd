@@ -27,14 +27,16 @@ func randomize_matrix():
 	update_visual_cell_matrix()	
 	generation_counter = 0
 	$HUD.update_counter(generation_counter)
+	# $HUD/PlayButton.pressed = false
 
 
-# Clear the matrix with no live cells
+# Functionality for the clear button - clear the matrix with no live cells
 func clear_matrix():
 	cell_matrix = generate_random_matrix(grid_size.y, grid_size.x, 0)
 	update_visual_cell_matrix()	
 	generation_counter = 0
 	$HUD.update_counter(generation_counter)
+	$HUD/PlayButton.pressed = false
 
 
 # Changes the camera zoom with the values of the slider (min and max values
@@ -42,8 +44,29 @@ func clear_matrix():
 func zoom_value_changed(value):
 	$Camera2D.zoom.x = value
 	$Camera2D.zoom.y = value
-	
-	
+
+
+# Logic for every tick of the generation timer
+func _on_GenerationTimer_timeout():
+	update_next_generation()
+
+
+# Activates the automatic generation of the board depending on the check button
+func handle_start_button():
+	$GenerationTimer.start()
+
+
+# Deactivates the automatic generation of the board depending on the check button
+func handle_stop_button():
+	$GenerationTimer.stop()
+
+
+# Updates the Generation Timer with the speed indicated in the speed slider
+# from the UI.
+func update_generation_speed(next_generation_speed):
+	$GenerationTimer.wait_time = next_generation_speed
+
+
 # Handles the creation or deletion of cells in the cell_matrix by clicking
 # on the cells.
 func _unhandled_input(event):
@@ -143,7 +166,7 @@ func get_number_of_live_neighbours(cell_matrix, y, x):
 			number_of_live_neighbours += 1
 	
 	return number_of_live_neighbours
-	
-	
+
+
 
 
