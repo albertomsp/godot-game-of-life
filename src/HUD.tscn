@@ -96,9 +96,9 @@ __meta__ = {
 }
 
 [node name="ZoomLabel" type="Label" parent="."]
-anchor_left = 0.7
+anchor_left = 0.75
 anchor_top = 0.95
-anchor_right = 0.7
+anchor_right = 0.75
 anchor_bottom = 0.95
 margin_left = -59.0
 margin_top = -24.8
@@ -125,7 +125,22 @@ ticks_on_borders = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CheckButton" type="CheckButton" parent="."]
+anchor_left = 0.6
+anchor_top = 0.97
+anchor_right = 0.6
+anchor_bottom = 0.97
+margin_left = -61.7357
+margin_top = -40.0
+margin_right = 61.2643
+custom_fonts/font = SubResource( 1 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="NextGenButton" to="." method="_on_NextGenButton_pressed"]
 [connection signal="pressed" from="PopulateRandom" to="." method="_on_PopulateRandom_pressed"]
 [connection signal="pressed" from="ClearButton" to="." method="_on_ClearButton_pressed"]
 [connection signal="value_changed" from="ZoomLabel/ZoomSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_CheckButton_toggled"]

@@ -37,9 +37,11 @@ offset_h = 1.0
 offset_v = 1.0
 
 [node name="GenerationTimer" type="Timer" parent="Board"]
-autostart = true
+wait_time = 0.5
 [connection signal="clear_matrix" from="Board/HUD" to="Board" method="clear_matrix"]
 [connection signal="next_generation" from="Board/HUD" to="Board" method="update_next_generation"]
 [connection signal="randomize_matrix" from="Board/HUD" to="Board" method="randomize_matrix"]
+[connection signal="start" from="Board/HUD" to="Board" method="handle_start_button"]
+[connection signal="stop" from="Board/HUD" to="Board" method="handle_stop_button"]
 [connection signal="zoom_value_changed" from="Board/HUD" to="Board" method="zoom_value_changed"]
 [connection signal="timeout" from="Board/GenerationTimer" to="Board" method="_on_GenerationTimer_timeout"]

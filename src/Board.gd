@@ -42,8 +42,16 @@ func clear_matrix():
 func zoom_value_changed(value):
 	$Camera2D.zoom.x = value
 	$Camera2D.zoom.y = value
-	
-	
+
+
+func handle_start_button():
+	$GenerationTimer.start()
+
+
+func handle_stop_button():
+	$GenerationTimer.stop()
+
+
 # Handles the creation or deletion of cells in the cell_matrix by clicking
 # on the cells.
 func _unhandled_input(event):
