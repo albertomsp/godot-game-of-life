@@ -112,10 +112,11 @@ __meta__ = {
 }
 
 [node name="ZoomSlider" type="HSlider" parent="ZoomLabel"]
-margin_left = -11.0
-margin_top = 23.0
-margin_right = 65.0
-margin_bottom = 39.0
+margin_left = 64.286
+margin_top = 20.6052
+margin_right = 140.286
+margin_bottom = 36.6052
+rect_scale = Vector2( -1, 1 )
 min_value = 0.5
 max_value = 5.0
 step = 0.1
@@ -142,13 +143,15 @@ __meta__ = {
 }
 
 [node name="SpeedSlider" type="HSlider" parent="CheckButton"]
-margin_left = 7.0
-margin_top = 34.0
-margin_right = 109.0
-margin_bottom = 50.0
+margin_left = 107.282
+margin_top = 32.9523
+margin_right = 209.282
+margin_bottom = 48.9523
+rect_scale = Vector2( -1, 1 )
+rect_pivot_offset = Vector2( 1, 0 )
 min_value = 0.05
 max_value = 1.0
-step = 0.05
+step = 0.1
 value = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
