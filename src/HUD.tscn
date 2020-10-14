@@ -50,9 +50,9 @@ __meta__ = {
 }
 
 [node name="GenerationCounter" type="Label" parent="."]
-anchor_left = 0.5
+anchor_left = 0.47
 anchor_top = 0.955
-anchor_right = 0.5
+anchor_right = 0.47
 anchor_bottom = 0.955
 margin_left = -5.89218
 margin_top = -20.0
@@ -146,9 +146,9 @@ margin_left = 7.0
 margin_top = 34.0
 margin_right = 109.0
 margin_bottom = 50.0
-min_value = 0.1
+min_value = 0.05
 max_value = 1.0
-step = 0.1
+step = 0.05
 value = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
