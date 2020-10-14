@@ -137,6 +137,20 @@ margin_right = 61.2643
 custom_fonts/font = SubResource( 1 )
 text = "Play"
 __meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedSlider" type="HSlider" parent="CheckButton"]
+margin_left = 7.0
+margin_top = 34.0
+margin_right = 109.0
+margin_bottom = 50.0
+min_value = 0.1
+max_value = 1.0
+step = 0.1
+value = 1.0
+__meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="NextGenButton" to="." method="_on_NextGenButton_pressed"]
@@ -144,3 +158,4 @@ __meta__ = {
 [connection signal="pressed" from="ClearButton" to="." method="_on_ClearButton_pressed"]
 [connection signal="value_changed" from="ZoomLabel/ZoomSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="toggled" from="CheckButton" to="." method="_on_CheckButton_toggled"]
+[connection signal="value_changed" from="CheckButton/SpeedSlider" to="." method="_on_SpeedSlider_value_changed"]

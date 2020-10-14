@@ -43,13 +43,26 @@ func zoom_value_changed(value):
 	$Camera2D.zoom.x = value
 	$Camera2D.zoom.y = value
 
+# Logic for every tick of the generation timer
+func _on_GenerationTimer_timeout():
+	update_next_generation()
 
+# Activates the automatic generation of the board depending on the check button
 func handle_start_button():
 	$GenerationTimer.start()
 
 
+# Deactivates the automatic generation of the board depending on the check button
 func handle_stop_button():
 	$GenerationTimer.stop()
+
+
+# Updates the Generation Timer with the speed indicated in the speed slider
+# from the UI.
+func update_generation_speed(next_generation_speed):
+	$GenerationTimer.wait_time = next_generation_speed
+
+
 
 
 # Handles the creation or deletion of cells in the cell_matrix by clicking
@@ -83,6 +96,8 @@ func update_visual_cell_matrix():
 			else:
 				set_cell(x, y, -1)
 
+
+	
 
 # Generates a random cell matrix
 func generate_random_matrix(columns, rows, alive_ratio):
@@ -153,6 +168,5 @@ func get_number_of_live_neighbours(cell_matrix, y, x):
 	return number_of_live_neighbours
 
 
-func _on_GenerationTimer_timeout():
-	update_next_generation()
+
 
