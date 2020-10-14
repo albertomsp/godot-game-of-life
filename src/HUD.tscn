@@ -51,9 +51,9 @@ __meta__ = {
 
 [node name="GenerationCounter" type="Label" parent="."]
 anchor_left = 0.47
-anchor_top = 0.955
-anchor_right = 0.47
-anchor_bottom = 0.955
+anchor_top = 0.958
+anchor_right = 0.472778
+anchor_bottom = 0.959167
 margin_left = -5.89218
 margin_top = -20.0
 margin_right = 5.10782
@@ -97,9 +97,9 @@ __meta__ = {
 
 [node name="ZoomLabel" type="Label" parent="."]
 anchor_left = 0.75
-anchor_top = 0.95
+anchor_top = 0.96
 anchor_right = 0.75
-anchor_bottom = 0.95
+anchor_bottom = 0.97
 margin_left = -59.0
 margin_top = -24.8
 margin_right = -13.0
@@ -112,10 +112,10 @@ __meta__ = {
 }
 
 [node name="ZoomSlider" type="HSlider" parent="ZoomLabel"]
-margin_left = 64.286
-margin_top = 20.6052
-margin_right = 140.286
-margin_bottom = 36.6052
+margin_left = 65.1841
+margin_top = 22.551
+margin_right = 141.184
+margin_bottom = 38.551
 rect_scale = Vector2( -1, 1 )
 min_value = 1.0
 max_value = 6.0
@@ -128,9 +128,9 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="CheckButton" parent="."]
-anchor_left = 0.6
+anchor_left = 0.57
 anchor_top = 0.97
-anchor_right = 0.6
+anchor_right = 0.57
 anchor_bottom = 0.97
 margin_left = -61.7357
 margin_top = -40.0
