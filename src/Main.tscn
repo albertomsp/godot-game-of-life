@@ -38,6 +38,13 @@ offset_v = 1.0
 
 [node name="GenerationTimer" type="Timer" parent="Board"]
 wait_time = 0.5
+
+[node name="ColorRect" type="ColorRect" parent="Board"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="clear_matrix" from="Board/HUD" to="Board" method="clear_matrix"]
 [connection signal="next_generation" from="Board/HUD" to="Board" method="update_next_generation"]
 [connection signal="next_generation_speed" from="Board/HUD" to="Board" method="update_generation_speed"]
